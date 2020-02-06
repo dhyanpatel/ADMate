@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <Title>Active Directory Mate</Title>
+        <Authors>Dhyan Patel</Authors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.DirectoryServices.AccountManagement" Version="4.7.0" />
+    </ItemGroup>
+
+</Project>
