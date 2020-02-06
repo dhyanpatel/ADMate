@@ -4,6 +4,9 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <Title>Active Directory Mate</Title>
         <Authors>Dhyan Patel</Authors>
+        <Description>C# Library to make it easier to work with Microsoft Active Directories</Description>
+        <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <ItemGroup>
