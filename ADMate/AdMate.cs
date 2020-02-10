@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.DirectoryServices.AccountManagement;
 using System.Runtime.InteropServices;
 
@@ -44,6 +46,24 @@ namespace ADMate {
                 return false;
             } catch (COMException e) {
                 throw e;
+            }
+        }
+
+        public List<string> GetUserGroups(string userId) {
+            try {
+                UserPrincipal user = UserPrincipal.FindByIdentity(_pc, userId);
+
+                PrincipalSearchResult<Principal> searchResult = user.GetGroups();
+
+                List<string> result = new List<string>();
+                foreach (var found in searchResult) {
+                    result.Add(found.Name);
+                }
+
+                return result;
+            } catch (Exception e) {
+                Console.WriteLine(e);
+                return null;
             }
         }
     }
